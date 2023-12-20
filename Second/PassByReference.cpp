@@ -36,7 +36,6 @@ int main() {
     string s = " Bill";
     dosome(s);
     cout << s << endl;
-    return 0;
 
     int n =5;
     int arr[n];
@@ -45,5 +44,6 @@ int main() {
     }
     dosometh(arr,n);
     cout << "Value inside int main: " << arr[0] << endl;
-
+    
+    return 0;
 }
