@@ -1,0 +1,22 @@
+What is Space Complexity?
+Memory Space
+Big-Oh Notation
+
+Auxiliary Space + Input Space
+Auxiliary Space -> Space that you take to solve the problem
+Input Space -> Space that you take to store the input
+Ex: a,b    {input space}
+    c=a+b  {Auxiliary space}
+int a[N];   O(N)    
+
+Note: a,b;  b=a+b;  This will save your data
+But never do this to input as it would manipulate the data
+So if youre working for a bigger MNC then 
+that can cause an issue
+
+CP CC CS GFG  have their server for running code
+Code is run from those servers
+Most of them takes 1s for 10^8 operations
+2s = 2*10^8 operaions
+3s = 3*10^8 operaions
+TC =1s similar to O(10^8) [if you go for a coding round]

@@ -1,0 +1,92 @@
+What is Time Complexity?
+TC not equal to Time taken for a program to implement 
+    as different systems have different configurations.
+
+Rate at which the time taken increases with request to the input size.   
+Big O Notation O()
+
+TC -> worst case scenario
+   -> avoid constants
+   -> avoid lower 
+   
+Ex: for(i=1;i<=n;i++) {
+    cout << "raj";
+}  
+Since the code is running 3 times and loop is running n times
+So Time Complexity is O(3n)
+
+Why Worst case scenario      
+Ex: if(marks<25) cout << "D";
+    Else if(marks<45) cout << "C";
+    Else if(marks<65) cout << "B";
+    Else (marks<85) cout << "A";
+Say the score is 10 then the code will just run 2 times
+That would be a best case scenario
+But if the marks are say 70 then it would run like 4 times
+That would be a worst case scenario
+So we always consider worst case scenario
+
+Why Avoid constants
+Ex: O(4N^3 + 3N^2 + 8)   N=10^5
+    O(4*10^15 + 3*10^10 + 8)  
+So here since the value of N is too much so 8 won't matter much here 
+When the values are very large, constants dont have a significance. 
+So we don't consider constants here
+
+Why avoid Lower Values
+Ex: O(4*10^15 + 3*10^10 + 8) 
+Here 4 & 3 can be neglected 
+as it wont make much sense in 
+multiplying it with 10^15 & 10^10 respectively.
+
+Big-Oh (O) -> worst Case [Upper Bond]
+Theta      -> Average Complexity
+Omega      -> Lowest Bond
+
+Ques 1...
+for(int i=0;i<N;i++) {
+    for(int j=0;j<N;j++) {
+        // some block of code here
+        }     
+    }
+The code is running like 5 times and the loop:
+i=0 {j=0,1,2,3,4,5.....N}
+i=1 {j=0,1,2,3,4,5.....N}
+i=2 {j=0,1,2,3,4,5.....N}
+i=3 {j=0,1,2,3,4,5.....N}
+i=4 {j=0,1,2,3,4,5.....N}
+..........................
+..........................
+..........................
+..........................
+..........................
+..........................
+i=N {j=0,1,2,3,4,5.....N}
+So N^2
+Now time complexity would be O(N^2)
+Will neglect 5 since we avoid lower values
+
+Ques 2...
+for(int i=0;i<N;i++) {
+    for(int j=0;j<i;j++) {
+        // Code             
+    }
+}
+The code is running the same way
+i=0 {j=0}
+i=1 {j=0,1}
+i=2 {j=0,1,2}
+i=3 {j=0,1,2,3}
+..........
+..........
+..........
+..........
+i=N {j=0,1,2,3,4,5.....N}
+This is similar to Arithmetic Progressions
+(1+2+3+4.....+N)   
+So the TC is N(N+1)/2 = N^2/2 + N/2
+Now neglecting N/2 since its a constants
+Now also neglecting 1/2 since lower values
+TC would be O(N^2)
+
+
