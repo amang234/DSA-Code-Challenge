@@ -1,10 +1,9 @@
 /*
 Patterns -> Nested Loops
-Ex:
- 1      1       0
- 12    21       1
- 123  321       2
- 12344321       3
+Ex: * * * *    
+    *     *   
+    *     *   
+    * * * *    
 1. For the outer loop, count the number of lines.
 So here the no. of rows are 4 and columns are 4 too.
 2. For the inner loop, focus on the columns 
@@ -14,20 +13,15 @@ and connect them somehow to the rows
 */
 #include<bits/stdc++.h>
 using namespace std;
-void print1(int n) { 
-    int space=2*(n-1);
-    for(int i=1;i<=n;i++) {
-        for(int j=1;j<=i;j++) {
-            cout<< j<<" ";
+void print1(int n) {
+    for(int i=0;i<n;i++) {
+        for(int j=0;j<n;j++) {
+            if(i==0 || j==0 || i==n-1 || j==n-1) {
+                cout<<"* "; 
+            }
+            else cout << "  ";
         }
-        for(int j=1;j<=space;j++) {
-            cout<<"  ";
-        }
-        for(int j=i;j>=1;j--) {
-            cout<< j<<" ";
-        } 
         cout<< endl;
-        space -=2;
     }
 }
 int main() {
