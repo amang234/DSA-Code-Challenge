@@ -17,7 +17,7 @@ void explainPQ() {
 
     // Size swap empty function same as other
 
-    //Min Heap
+    //Min Heap OR Minimum Priority Queue
     Priority_queue<int, vector<int>, greater<int>> pq;
     pq.push(5);    //{5}                    | 2|
     pq.push(2);    //{2, 5}                 | 5| 
